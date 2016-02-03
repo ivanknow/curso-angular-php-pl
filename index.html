@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="countries">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<style>
+ul {
+	border: 1px solid orange;
+}
+</style>
+</head>
+<body>
+
+	<h1>Fun with countries!</h1>
+	<div ng-controller="CountryController as countryCtrl">
+		<ul>
+			<li ng-repeat="c in countryCtrl.countries"> 
+			<img ng-src="images/{{c.code}}.png" width="24px">
+			{{c.name}}
+			<state-view></state-view>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
